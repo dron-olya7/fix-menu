@@ -143,7 +143,7 @@
           </svg>
         </button>
 
-        <form name="calculation_form" method="POST">
+        <form name="calculation_form" method="POST" class="calculation_form">
           <input type="hidden" name="cityval" />
           <input type="hidden" name="user_hepl" class="user_hepl" />
 
@@ -308,7 +308,22 @@
               </label>
             </div>
           </div>
+
+          <!-- Добавьте этот блок в модальное окно после формы -->
+          
         </form>
+        <div
+            class="thank-you-block"
+            id="thankYouBlock"
+            style="display: none; text-align: center; padding: 40px 20px"
+          >
+            <h3 style="color: #e41820; font-size: 24px; margin-bottom: 20px">
+              Спасибо за заявку!
+            </h3>
+            <p style="font-size: 16px; color: #333">
+              Мы свяжемся с вами в ближайшее время
+            </p>
+          </div>
       </div>
     </div>
 
