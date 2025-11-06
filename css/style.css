@@ -1,0 +1,721 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  min-height: 200vh;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Фиксированное меню */
+.fixed-menu {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.fixed-menu-desc {
+  display: flex;
+  gap: 60px;
+}
+
+.menu-button {
+  width: 60px;
+  height: 60px;
+  background: #2c231d;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  right: 200px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1002;
+  top: 0px;
+}
+.menu-button.open{
+  top: -80px;
+}
+.menu-button:hover {
+  transform: scale(1.1);
+}
+
+.burger-line {
+  width: 29px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.menu-button.open .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+
+.menu-button.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.open .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Панель меню */
+.menu-panel {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #f6f6f6;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  display: none;
+  height: 140px;
+  z-index: 1001;
+  animation: slideUp 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.menu-panel.show {
+  display: flex;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Кнопка предложения */
+.offer-button {
+  width: 472px;
+  height: 50px;
+  background: linear-gradient(
+    231.14deg,
+    #f42b34 10.83%,
+    #ff000b 39.67%,
+    #e20812 60.86%
+  );
+  border: 1px solid #e41820;
+  box-shadow: 6px 8px 15px rgba(239, 0, 9, 0.4);
+  border-radius: 10px;
+  font-family: "Raleway-Medium";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Карточка консультанта */
+.consultant-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.consultant-avatar {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.consultant-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.consultant-info {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  max-width: 287px;
+}
+
+.consultant-info::before {
+  content: "";
+  width: 13px;
+  border: 2px solid #e41820;
+  flex-shrink: 0;
+  margin-top: 11px;
+}
+
+.consultant-info-desc {
+  flex: 1;
+}
+
+.consultant-name {
+  font-family: "Raleway-Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #433030;
+}
+
+.consultant-description {
+  font-family: "Raleway-Regular";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 135%;
+  color: #433030;
+}
+
+/* Кнопки связи */
+.contact-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.contact-buttons::before {
+  content: "";
+  width: 13px;
+  border: 2px solid #e41820;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.contact-buttons-description {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.contact-desc {
+  font-family: "Raleway-Bold";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #433030;
+}
+
+.contact-buttons-desc {
+  display: flex;
+  gap: 12px;
+}
+
+.buttons-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* Пульсирующий зеленый кружок */
+.pulse-dot {
+  box-sizing: border-box;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -6px;
+  top: -3px;
+  background: #00da3e;
+  border: 1px solid #ffffff;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  z-index: 2;
+  border-radius: 50%;
+  border: 2px solid white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(76, 175, 80, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+/* Попап форма */
+/* Стили для нового попапа с уникальными классами */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.materials{
+      display: flex
+;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.material{
+    display: flex;
+    gap: 14px;
+        padding: 10px;
+            align-items: center;
+}
+
+.material:first-child svg{
+  margin-right: 9px;
+}
+
+
+.material p{
+  font-family: 'Raleway-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 135%;
+    color: #000000;
+}
+
+.material p{
+      width: 100%;
+}
+
+.material:first-child p{
+  width: 75%;
+}
+
+.calculation-modal {
+     background: #F6F6F6;
+    border-radius: 0;
+    padding: 40px;
+    max-width: 643px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #8E8E8E;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+  position: relative;
+  color: #1c1c1c;
+}
+
+.modal-subtitle {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 24px;
+  color: #1c1c1c;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.modal-form {
+  margin-top: 35px;
+}
+
+.form-field {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-input {
+  padding: 14px 26px;
+  width: 100%;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #5f5f5f;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  background-color: #e9e9e9;
+  outline: none;
+}
+
+.form-input.error {
+  border-color: #e11d48;
+  background-color: #fef2f2;
+}
+
+.error-message {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  color: #e11d48;
+  font-size: 12px;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+}
+
+.error-message.show {
+  display: flex;
+}
+
+.contact-methods-title {
+     font-family: 'Raleway-SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 135%;
+    color: #000000;
+    padding: 10px;
+        margin-bottom: 16px;
+}
+
+.contact-options {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-option {
+  height: 93px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 10px;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.contact-option:hover {
+  border-color: #e41820;
+}
+
+.contact-option input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.option-checkbox {
+  display: none;
+}
+
+.contact-option p {
+      font-family: 'Raleway-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: #000000;
+}
+
+.contact-option input[type="checkbox"]:checked ~ .option-checkbox {
+  display: none;
+}
+
+.contact-option:has(input[type="checkbox"]:checked) {
+  border-color: #e41820;
+}
+
+.submit-button {
+  width: 100%;
+  height: 50px;
+  background-color: #e41820;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.submit-button:hover {
+  background: linear-gradient(
+    231.14deg,
+    #ff222c 10.83%,
+    #ff1e28 39.67%,
+    #ff202a 60.86%
+  );
+}
+
+.submit-button:disabled {
+  background-color: #d40b14;
+  cursor: not-allowed;
+}
+
+.security-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.security-text {
+  font-size: 14px;
+  color: #1c1c1c;
+}
+
+.privacy-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.privacy-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 19px;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  background: white;
+  position: relative;
+  cursor: pointer;
+  height: 18px !important;
+  width: 18px !important;
+  margin: 0;
+}
+
+.privacy-checkbox input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to bottom, #ff805e, #f2252e) 1;
+  transform: translate(-50%, -84%) rotate(-51deg);
+  height: 7px !important;
+  width: 10px !important;
+}
+
+.privacy-checkbox span,
+.privacy-checkbox a {
+  color: #756161;
+  font-size: 14px;
+}
+
+.privacy-checkbox a {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+@media (max-width: 768px) {
+  .calculation-modal {
+    padding: 20px;
+  }
+  
+  .modal-title {
+    font-size: 24px;
+  }
+  
+  .modal-subtitle {
+    font-size: 18px;
+  }
+  
+  .contact-options {
+    justify-content: center;
+  }
+  
+  .contact-option {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .menu-button {
+    right: 0;
+  }
+  .menu-button.open {
+    top: -90px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+  .menu-panel {
+    gap: 40px;
+  }
+  .offer-button {
+    width: 382px;
+    font-size: 14px;
+  }
+  .consultant-avatar {
+    width: 60px;
+    height: 60px;
+  }
+  .fixed-menu-desc {
+    gap: 40px;
+  }
+  .menu-button {
+    width: 40px;
+    height: 40px;
+  }
+  .burger-line {
+    width: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .consultant-name {
+    font-size: 14px;
+  }
+  .consultant-description {
+    font-size: 12px;
+  }
+  .contact-desc {
+    font-size: 14px;
+  }
+  .offer-button {
+    font-size: 12px;
+  }
+  .offer-button svg {
+    display: none;
+  }
+  .menu-button {
+    top: 0;
+  }
+
+  .menu-panel {
+    padding: 10px;
+    gap: 20px;
+  }
+  .fixed-menu-desc {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .fixed-menu {
+    bottom: 20px;
+    right: 20px;
+  }
+      .menu-button.open {
+        top: -160px;
+    }
+
+  .menu-panel {
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+      .menu-button {
+        width: 40px;
+        height: 40px;
+        top: 0;
+    }
+
+  .offer-button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .consultant-card,
+  .contact-buttons {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 469px) {
+    .menu-button.open {
+        top: -185px;
+    }
+        .offer-button {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 427px) {
+    .menu-button.open {
+        top: -200px;
+    }
+}
+
+@media (max-width: 394px) {
+    .menu-button.open {
+        top: -211px;
+    }
+}
+
+@media (max-width: 392px) {
+    .menu-button.open {
+        top: -234px;
+    }
+}
+
+@media (max-width: 362px) {
+    .menu-button.open {
+        top: -260px;
+    }
+}
