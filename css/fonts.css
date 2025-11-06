@@ -25,3 +25,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Raleway-Light";
+  src: url("../fonts/Raleway/Raleway-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
