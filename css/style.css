@@ -226,11 +226,20 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
 }
 
-.contact-icon {
-  font-size: 24px;
-  margin-bottom: 8px;
+.whatsapp .contact-icon svg {
+  transition: .5s;
+}
+
+.whatsapp .contact-icon svg:hover path:first-child {
+  fill: #2d682f;
+}
+
+.telegram .contact-icon svg:hover g path {
+  fill: #076999;
+
 }
 
 /* Пульсирующий зеленый кружок */
@@ -765,35 +774,34 @@ color: #756161;
 }
 
 @media (max-width: 469px) {
-    .menu-button.open {
-        top: -185px;
-    }
-        .offer-button {
-        width: 100%;
-        font-size: 12px;
-    }
+  .menu-button.open {
+    top: -60px;
+  }
+
+  .offer-button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .fixed-menu-desc {
+    display: none;
+  }
 }
 
 @media (max-width: 427px) {
-    .menu-button.open {
-        top: -200px;
-    }
+  .menu-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .burger-line {
+    width: 17px;
+  }
+  .menu-button {
+    border-radius: 6px;
+  }
+
+
+
 }
 
-@media (max-width: 394px) {
-    .menu-button.open {
-        top: -211px;
-    }
-}
-
-@media (max-width: 392px) {
-    .menu-button.open {
-        top: -234px;
-    }
-}
-
-@media (max-width: 362px) {
-    .menu-button.open {
-        top: -260px;
-    }
-}
