@@ -615,6 +615,39 @@ body {
   border-bottom: 1px solid;
 }
 
+
+.menu-close {
+position: absolute;
+    right: 250px;
+    bottom: 112px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background: #2C231D;
+    border-radius: 10px;
+    justify-content: center;
+}
+.menu-close:hover {
+  background: #181310;
+}
+.fixed-menu.hidden {
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.fixed-menu {
+  transition: transform 0.4s ease;
+}
+
+
+
 @media (max-width: 768px) {
   .calculation-modal {
     padding: 20px;
@@ -635,6 +668,12 @@ body {
   .contact-option {
     height: 100%;
   }
+      .menu-close {
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        bottom: 123px;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -667,6 +706,9 @@ body {
   }
   .burger-line {
     width: 22px;
+  }
+  .menu-close {
+    right: 40px;
   }
 }
 
@@ -774,6 +816,12 @@ body {
   .contact-buttons {
     max-width: 100%;
   }
+    .menu-close {
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        bottom: 180px;
+    }
 }
 
 @media (max-width: 469px) {
@@ -789,6 +837,12 @@ body {
   .fixed-menu-desc {
     display: none;
   }
+      .menu-close {
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        bottom: 77px;
+    }
 }
 
 @media (max-width: 427px) {
@@ -804,3 +858,4 @@ body {
     border-radius: 6px;
   }
 }
+

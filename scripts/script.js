@@ -19,3 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const menuPanel = document.getElementById("menuPanel");
+  const menuClose = document.getElementById("menuClose");
+
+  menuClose.addEventListener("click", function () {
+    menuPanel.style.display = "none";  // ← исчезает всё: и меню, и кнопка
+  });
+});
