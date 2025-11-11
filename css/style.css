@@ -47,7 +47,7 @@ body {
   z-index: 1002;
   top: 0px;
 }
-.menu-button.open{
+.menu-button.open {
   top: -80px;
 }
 .menu-button:hover {
@@ -226,11 +226,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
 }
 
 .whatsapp .contact-icon svg {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .whatsapp .contact-icon svg:hover path:first-child {
@@ -239,7 +238,6 @@ body {
 
 .telegram .contact-icon svg:hover g path {
   fill: #076999;
-
 }
 
 /* Пульсирующий зеленый кружок */
@@ -295,53 +293,51 @@ body {
   display: flex;
 }
 
-.materials{
-      display: flex
-;
-    flex-direction: column;
-    gap: 20px;
+.materials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.material{
-    display: flex;
-    gap: 14px;
-        padding: 10px;
-            align-items: center;
+.material {
+  display: flex;
+  gap: 14px;
+  padding: 10px;
+  align-items: center;
 }
 
-.material:first-child svg{
+.material:first-child svg {
   margin-right: 9px;
 }
 
-
-.material p{
-  font-family: 'Raleway-Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 135%;
-    color: #000000;
+.material p {
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 135%;
+  color: #000000;
 }
 
-.material p{
-      width: 100%;
+.material p {
+  width: 100%;
 }
 
-.material:first-child p{
+.material:first-child p {
   width: 75%;
 }
 
 .calculation-modal {
   display: none;
-    background: #F6F6F6;
-    border-radius: 0;
-    padding: 40px;
-    max-width: 643px !important;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #f6f6f6;
+  border-radius: 0;
+  padding: 40px;
+  max-width: 643px !important;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close {
@@ -352,7 +348,7 @@ body {
   border: none;
   cursor: pointer;
   font-size: 24px;
-  color: #8E8E8E;
+  color: #8e8e8e;
   width: 30px;
   height: 30px;
   display: flex;
@@ -387,10 +383,10 @@ body {
   position: relative;
 }
 
-.form-field svg{
-      position: absolute;
-    left: 23px;
-    top: 24px;
+.form-field svg {
+  position: absolute;
+  left: 23px;
+  top: 24px;
 }
 
 .form-input {
@@ -400,21 +396,18 @@ body {
   font-size: 16px;
   transition: all 0.3s ease;
 
-      background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    border-radius: 2px;
-    margin-bottom: 32px;
+  background: #ffffff;
+  border: 1px solid #c4c4c4;
+  border-radius: 2px;
+  margin-bottom: 32px;
 
-font-family: 'Raleway-Regular';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 140%;
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
 
-color: #756161;
-
-
-
+  color: #756161;
 }
 
 .form-input:focus {
@@ -434,28 +427,27 @@ color: #756161;
   color: #e11d48;
   font-size: 12px;
   position: absolute;
-      top: 24px;
-    right: 23px;
+  top: 24px;
+  right: 23px;
 }
 
 .error-message.show {
   display: flex;
 }
 
-
 .error-message svg {
-    position: unset;
+  position: unset;
 }
 
 .contact-methods-title {
-     font-family: 'Raleway-SemiBold';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 135%;
-    color: #000000;
-    padding: 10px;
-        margin-bottom: 16px;
+  font-family: "Raleway-SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 135%;
+  color: #000000;
+  padding: 10px;
+  margin-bottom: 16px;
 }
 
 .contact-options {
@@ -498,19 +490,22 @@ color: #756161;
 }
 
 .contact-option p {
-      font-family: 'Raleway-Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 135%;
-    color: #000000;
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 135%;
+  color: #000000;
+  margin: 0;
 }
 
 .contact-option input[type="checkbox"]:checked ~ .option-checkbox {
   display: none;
 }
 
-.contact-option:hover{border-color: #e41820;}
+.contact-option:hover {
+  border-color: #e41820;
+}
 
 .contact-option:has(input[type="checkbox"]:checked) {
   border-color: #e41820;
@@ -524,16 +519,24 @@ color: #756161;
   transition: 0.5s;
   margin-bottom: 24px;
 
-
-      width: 100%;
-    height: 50px;
-    background: linear-gradient(231.14deg, #F42B34 10.83%, #FF000B 39.67%, #E20812 60.86%);
-    border: 1px solid #E41820;
-    box-shadow: 0px 10px 15px rgba(239, 0, 9, 0.4);
-    border-radius: 10px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(
+    231.14deg,
+    #f42b34 10.83%,
+    #ff000b 39.67%,
+    #e20812 60.86%
+  );
+  border: 1px solid #e41820;
+  box-shadow: 0px 10px 15px rgba(239, 0, 9, 0.4);
+  border-radius: 10px;
 }
-.offer-button:hover, .offer-buttonactive, .offer-button:focus, 
-.submit-button:hover, .submit-button:active, .submit-button:focus  {
+.offer-button:hover,
+.offer-buttonactive,
+.offer-button:focus,
+.submit-button:hover,
+.submit-button:active,
+.submit-button:focus {
   background: linear-gradient(
     231.14deg,
     #ff222c 10.83%,
@@ -555,12 +558,12 @@ color: #756161;
 }
 
 .security-text {
-      font-family: 'Raleway-Light';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 22px;
-    color: #000000;
+  font-family: "Raleway-Light";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
 }
 
 .privacy-checkbox {
@@ -599,12 +602,12 @@ color: #756161;
 
 .privacy-checkbox span,
 .privacy-checkbox a {
-      font-family: 'Raleway-Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    color: #756161;
+  font-family: "Raleway-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #756161;
 }
 
 .privacy-checkbox a {
@@ -616,19 +619,19 @@ color: #756161;
   .calculation-modal {
     padding: 20px;
   }
-  
+
   .modal-title {
     font-size: 24px;
   }
-  
+
   .modal-subtitle {
     font-size: 18px;
   }
-  
+
   .contact-options {
     justify-content: center;
   }
-  
+
   .contact-option {
     height: 100%;
   }
@@ -640,7 +643,7 @@ color: #756161;
   }
   .menu-button.open {
     top: -90px;
-}
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -665,7 +668,6 @@ color: #756161;
   .burger-line {
     width: 22px;
   }
-
 }
 
 @media screen and (max-width: 1000px) {
@@ -677,36 +679,36 @@ color: #756161;
   }
   .materials {
     gap: 0px;
-}
+  }
 
-.modal-form {
+  .modal-form {
     margin-top: 10px;
-}
-.form-input {
+  }
+  .form-input {
     padding: 0 60px;
     width: 100%;
     height: 45px;
     margin-bottom: 20px;
-}
-.form-field svg {
+  }
+  .form-field svg {
     position: absolute;
     left: 23px;
     top: 16px;
-}
-.error-message {
+  }
+  .error-message {
     top: 15px;
-}
-.error-message svg {
+  }
+  .error-message svg {
     position: unset;
-}
-.security-text {
+  }
+  .security-text {
     font-size: 14px;
+  }
 
-}
-
-.privacy-checkbox span, .privacy-checkbox a {
+  .privacy-checkbox span,
+  .privacy-checkbox a {
     font-size: 12px;
-}
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -743,9 +745,9 @@ color: #756161;
     bottom: 20px;
     right: 20px;
   }
-      .menu-button.open {
-        top: -160px;
-    }
+  .menu-button.open {
+    top: -160px;
+  }
 
   .menu-panel {
     right: 0;
@@ -757,11 +759,11 @@ color: #756161;
     gap: 20px;
   }
 
-      .menu-button {
-        width: 40px;
-        height: 40px;
-        top: 0;
-    }
+  .menu-button {
+    width: 40px;
+    height: 40px;
+    top: 0;
+  }
 
   .offer-button {
     width: 100%;
@@ -801,8 +803,4 @@ color: #756161;
   .menu-button {
     border-radius: 6px;
   }
-
-
-
 }
-
