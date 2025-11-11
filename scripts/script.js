@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const offerButton = document.getElementById("offerButton");
-  const modalOffer = document.getElementById("modalOverlay");
+  const modalOffer = document.getElementById("get-fixed-offer");
   const modalClose = document.getElementById("modalClose");
 
   offerButton.addEventListener("click", function () {
