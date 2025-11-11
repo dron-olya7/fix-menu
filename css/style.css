@@ -83,7 +83,7 @@ body {
   background: #f6f6f6;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   padding: 30px;
-  display: none;
+  display: flex;
   height: 140px;
   z-index: 1001;
   animation: slideUp 0.3s ease;
