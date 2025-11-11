@@ -332,10 +332,11 @@ body {
 }
 
 .calculation-modal {
-     background: #F6F6F6;
+  display: none;
+    background: #F6F6F6;
     border-radius: 0;
     padding: 40px;
-    max-width: 643px;
+    max-width: 643px !important;
     width: 90%;
     max-height: 90vh;
     overflow-y: auto;
